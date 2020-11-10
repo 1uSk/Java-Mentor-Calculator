@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Main {
     static Scanner sc = new Scanner(System.in);
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IllegalArgumentException {
         Calculator calculator = new Calculator();
         String[] input = sc.nextLine().toUpperCase().split(" ");
 
@@ -16,10 +16,10 @@ public class Main {
         if (firstArabic != secondArabic) {
             throw new IllegalArgumentException("Калькулятор умеет работать только с арабскими или римскими цифрами одновременно");
         } else if ( !firstArabic && !secondArabic) {
-            System.out.println(calculator.calc(input[0], input[2], operation));
-        } else {
             ArabicToRoman atr = new ArabicToRoman();
-            System.out.println(atr.arabicToRoman(calculator.calc(Integer.parseInt(input[0]), Integer.parseInt(input[2]), operation)));
+            System.out.println(atr.arabicToRoman(calculator.calc(input[0], input[2], operation)));
+        } else {
+            System.out.println(calculator.calc(Integer.parseInt(input[0]), Integer.parseInt(input[2]), operation));
         }
 
         sc.close();
