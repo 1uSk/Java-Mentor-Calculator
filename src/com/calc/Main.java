@@ -16,6 +16,7 @@ public class Main {
         if (firstArabic != secondArabic) {
             throw new IllegalArgumentException("Калькулятор умеет работать только с арабскими или римскими цифрами одновременно");
         } else if ( !firstArabic && !secondArabic) {
+            //Roman
             ArabicToRoman atr = new ArabicToRoman();
             System.out.println(atr.arabicToRoman(calculator.calc(input[0], input[2], operation)));
         } else {
