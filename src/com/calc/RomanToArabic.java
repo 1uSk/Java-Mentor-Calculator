@@ -10,6 +10,12 @@ public class RomanToArabic {
 
         for (int i=0; i < chars.length; i++){
             switch (chars[i]){
+                //case 'C':
+                //    result += 100;
+                //    break;
+                //case 'L':
+                //    result += 50;
+                //    break;
                 case 'X':
                     result += 10;
                     break;
