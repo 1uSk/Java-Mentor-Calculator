@@ -10,9 +10,9 @@ public class ArabicToRoman {
 
     public String arabicToRoman(int arabic){
 
-        if(arabic < min || arabic >= max){
-            throw new IllegalArgumentException("Значение должно быть от 1 до 100");
-        }
+        //if(arabic < min || arabic > max){
+        //    throw new IllegalArgumentException("Значение должно быть от 1 до 100");
+        //}
 
         String result = "";
 
